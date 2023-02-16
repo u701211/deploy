@@ -1,0 +1,75 @@
+
+
+# 既存のSPAをガワアプリのテンプレートを使ってアプリ化する
+
+サンプル（gawa-app-projcct-sample）は下記のようにワークスペースを構成します。
+
+workspace.code-workspace
+{
+	"folders": [
+		{
+			"path": "gawa"
+		},
+		{
+			"path": "spa"
+		}
+	]
+}
+
+
+# SPAを配置します
+
+対象のSPAを配置します。
+・SPAのフォルダをspaとしています。
+
+
+# ガワアプリのテンプレートを取得します
+
+ガワアプリのソースをクーロンします。
+・ガワアプリのフォルダをgawaとしています。
+
+
+# SPAをビルドします
+
+
+# ビルドしたSPAファイルをガワアプリのassetsフォルダ以下にに配置します
+
+
+# ガワアプリをビルドします
+
+
+# 完成
+
+完成です。
+この様に、ガワアプリの機能を使用しない場合はSPAに特別な実装を行う必要はありません。
+
+
+
+
+# SPAからガワアプリの機能を呼び出す場合
+
+SPAからガワアプリの機能を利用する場合、
+下記のようにガワアプリが提供するライブラリをインポートして使用します。
+ライブラリはガワアプリの /react の位置に配置されています。
+
+## バッテリー残量の取得
+
+// インポート
+import { getBatteryLevel } from '../../gawa/react';
+
+// ステートの初期化
+const [batteryLevel, setBatteryLevel] = useState<number>();
+// 残量の取得
+getBatteryLevel(setBatteryLevel);
+
+
+## QRコードの取得
+
+// インポート
+import { getQRCode } from '../../gawa/react';
+
+// ステートの初期化
+const [qRCode, setQRCode] = useState<string>();
+// QRコードのの取得
+getQRCode(setQRCode)
+
