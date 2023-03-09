@@ -1,0 +1,9 @@
+「②WebViewPlusの問題」の可能性つぶしとして、
+https://github.com/akatonboX/flutter-sample/tree/flutter_webview
+(flutter_webviewブランチ)に、
+・webview_flutter:4.0.6を利用
+・localではなく、https://akatonbox.github.io/ts-react-mailer-sample/'を参照
+のアプリを作りました。
+android emulatorでは動作しています。
+iphoneで試してみて下さい。
+なお、info.plistはいじっていないので、良しなに。
